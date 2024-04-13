@@ -98,6 +98,9 @@ Navigate to your project directory: cd wordpress-docker
       docker-compose up -d
       '''
     -  The docker-compose up command builds and starts the services defined in docker-compose.yml.
+      
+    -  ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/50ee9b33-e70b-4132-866d-6f1f037c0f32)
+
     - The -d flag instructs Docker Compose to run the containers in detached mode, allowing them to run in the background.
 4. Accessing the WordPress Dashboard:
 
@@ -107,6 +110,8 @@ Navigate to your project directory: cd wordpress-docker
 5. Using phpMyAdmin:
 
     - The script also sets up phpMyAdmin for database management. You can access it at http://<your_lightsail_public_ip>:8081 using the MYSQL_ROOT_PASSWORD you defined in the .env file.
+    - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/3c1b25f8-65dc-4612-a29d-f9e9b42c645b)
+
   
 ### 4. Building Your Informative and Attractive Blog Website with WordPress and Docker
 
