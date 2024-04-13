@@ -12,7 +12,7 @@
 7. Building and Pushing Docker Image to Docker Hub
 ## Setting Up the AWS Lightsail Instance 
 
-### Launching a Lightsail Instance
+## 1. Launching a Lightsail Instance
 1. Log in and Choose Instance Creation:
     - Head to the AWS Lightsail console and sign in to your account.
     - On the Lightsail homepage, navigate to the "Instances" section and click on "Create instance".
@@ -23,17 +23,25 @@
 3. Pick an Instance Plan:
 
     - Lightsail provides different instance plans with varying combinations of CPU cores, RAM, and storage. Select a plan that offers enough resources for your application to function smoothly. Consider starting with a lower-tier plan and scaling up if needed.
+    - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/6c9550db-5980-475e-88f5-5123999ef475)
+    - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/f0d157b8-b59f-4f6d-859a-1f15ef26aadf)
+
+
     
 4. Configure Instance Details:
     - Instance Name: Provide a descriptive name for your instance for easy identification.
     - SSH Key Pair : If you plan to connect to your instance via SSH, create or choose an existing key pair for secure access.
     - Networking: Lightsail offers dual-stack (IPv4 and IPv6) or IPv6-only networking options. Select the appropriate one based on your application's requirements.
+    - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/87d65bf1-66b3-437c-9d25-3c16e25d8b17)
+
     
 5. Launch the Instance:
 
     - Once you've reviewed all the configurations, click on "Create instance" to launch your Lightsail instance.
+    - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/f7a398f2-4a76-4f4b-a203-8e1df3082055)
+
   
-### Docker Installation :
+### 2. Docker Installation :
 
     - Connect to your Lightsail instance using SSH and your key pair.
 
@@ -51,7 +59,7 @@
 
     - Install Docker Engine, containerd, and Docker Compose:
 
-     sudo apt install docker-ce docker-ce-cli containerd docker-compose
+    - sudo apt install docker.io -cli containerd docker-compose
 
     - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/3fa4d2fd-bb16-4afa-b541-ab2a66de0c79)
 
@@ -62,7 +70,7 @@
       ...
     - This should now display Docker version information, confirming a successful installation.
 
-### Deploying WordPress with Docker Compose: A Step-by-Step Guide
+### 3. Deploying WordPress with Docker Compose: A Step-by-Step Guide
 The provided Docker Compose script looks well-structured and sets up a multi-container environment for WordPress with MariaDB and phpMyAdmin. Let's break down the deployment process using your script:
 
 Prerequisites:
@@ -126,6 +134,8 @@ Now that you have a functional WordPress environment on your Lightsail instance,
 -  d) SMTP Server Plugin:
     To enable email functionality for your blog (e.g., contact form submissions), you'll need to configure an SMTP server. This typically involves using a plugin like WP Mail SMTP or Post SMTP. These 
            plugins allow you to connect your WordPress site to an external email service provider (ESP) like Gmail, SendGrid, etc., for sending emails.
+- ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/7611c85f-cbcc-4f59-8c5b-7b04b34c91ed)
+
            
 4.3. Creating Pages and Blog Posts on Cloud Technologies (AWS, Jenkins, Terraform, Prometheus, Grafana):
 
@@ -134,6 +144,8 @@ Now that you have a functional WordPress environment on your Lightsail instance,
  1. Creating Pages:
  -  Navigate to your WordPress admin dashboard.
  -  In the left-hand menu, hover over "Pages" and click on "Add New".
+ -  ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/ab78a0b2-d663-4f61-b038-e079c8232fcb)
+
 2. Building Each Page:
 
   -  **Home Page:** This is typically your website's landing page. You can use Elementor or the WordPress editor to create a visually appealing and informative homepage. Consider including elements like a 
