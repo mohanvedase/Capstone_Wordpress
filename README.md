@@ -53,6 +53,9 @@
 
      sudo apt install docker-ce docker-ce-cli containerd docker-compose
 
+    - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/3fa4d2fd-bb16-4afa-b541-ab2a66de0c79)
+
+
     - Verifying Installation:
       ...
       docker version
