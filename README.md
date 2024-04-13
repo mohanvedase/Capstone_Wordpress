@@ -119,6 +119,8 @@ Now that you have a functional WordPress environment on your Lightsail instance,
       - Here are some things to consider when evaluating Astha:
       - Check the theme's documentation and reviews to ensure it meets your needs and offers functionalities you desire 
       - Consider the theme's support options in case you encounter any issues during setup or customization.
+      - ![main plugin](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/4dc867cd-c841-4469-bb49-0d79b026327a)
+
 
 4.2. Installing and Configuring Plugins
 
@@ -135,6 +137,8 @@ Now that you have a functional WordPress environment on your Lightsail instance,
     To enable email functionality for your blog (e.g., contact form submissions), you'll need to configure an SMTP server. This typically involves using a plugin like WP Mail SMTP or Post SMTP. These 
            plugins allow you to connect your WordPress site to an external email service provider (ESP) like Gmail, SendGrid, etc., for sending emails.
 - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/7611c85f-cbcc-4f59-8c5b-7b04b34c91ed)
+- ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/978a8382-cb37-4491-bfe0-dd2cf64b2d72)
+
 
            
 4.3. Creating Pages and Blog Posts on Cloud Technologies (AWS, Jenkins, Terraform, Prometheus, Grafana):
