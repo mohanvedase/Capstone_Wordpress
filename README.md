@@ -12,7 +12,7 @@
 7. Building and Pushing Docker Image to Docker Hub
 ## Setting Up the AWS Lightsail Instance 
 
-### Launching a Lightsail Instance
+## 1. Launching a Lightsail Instance
 1. Log in and Choose Instance Creation:
     - Head to the AWS Lightsail console and sign in to your account.
     - On the Lightsail homepage, navigate to the "Instances" section and click on "Create instance".
@@ -23,17 +23,25 @@
 3. Pick an Instance Plan:
 
     - Lightsail provides different instance plans with varying combinations of CPU cores, RAM, and storage. Select a plan that offers enough resources for your application to function smoothly. Consider starting with a lower-tier plan and scaling up if needed.
+    - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/6c9550db-5980-475e-88f5-5123999ef475)
+    - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/f0d157b8-b59f-4f6d-859a-1f15ef26aadf)
+
+
     
 4. Configure Instance Details:
     - Instance Name: Provide a descriptive name for your instance for easy identification.
     - SSH Key Pair : If you plan to connect to your instance via SSH, create or choose an existing key pair for secure access.
     - Networking: Lightsail offers dual-stack (IPv4 and IPv6) or IPv6-only networking options. Select the appropriate one based on your application's requirements.
+    - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/87d65bf1-66b3-437c-9d25-3c16e25d8b17)
+
     
 5. Launch the Instance:
 
     - Once you've reviewed all the configurations, click on "Create instance" to launch your Lightsail instance.
+    - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/f7a398f2-4a76-4f4b-a203-8e1df3082055)
+
   
-### Docker Installation :
+### 2. Docker Installation :
 
     - Connect to your Lightsail instance using SSH and your key pair.
 
@@ -51,7 +59,7 @@
 
     - Install Docker Engine, containerd, and Docker Compose:
 
-     sudo apt install docker-ce docker-ce-cli containerd docker-compose
+    - sudo apt install docker.io -cli containerd docker-compose
 
     - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/3fa4d2fd-bb16-4afa-b541-ab2a66de0c79)
 
@@ -62,7 +70,7 @@
       ...
     - This should now display Docker version information, confirming a successful installation.
 
-### Deploying WordPress with Docker Compose: A Step-by-Step Guide
+### 3. Deploying WordPress with Docker Compose: A Step-by-Step Guide
 The provided Docker Compose script looks well-structured and sets up a multi-container environment for WordPress with MariaDB and phpMyAdmin. Let's break down the deployment process using your script:
 
 Prerequisites:
@@ -90,6 +98,9 @@ Navigate to your project directory: cd wordpress-docker
       docker-compose up -d
       '''
     -  The docker-compose up command builds and starts the services defined in docker-compose.yml.
+      
+    -  ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/50ee9b33-e70b-4132-866d-6f1f037c0f32)
+
     - The -d flag instructs Docker Compose to run the containers in detached mode, allowing them to run in the background.
 4. Accessing the WordPress Dashboard:
 
@@ -99,6 +110,8 @@ Navigate to your project directory: cd wordpress-docker
 5. Using phpMyAdmin:
 
     - The script also sets up phpMyAdmin for database management. You can access it at http://<your_lightsail_public_ip>:8081 using the MYSQL_ROOT_PASSWORD you defined in the .env file.
+    - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/3c1b25f8-65dc-4612-a29d-f9e9b42c645b)
+
   
 ### 4. Building Your Informative and Attractive Blog Website with WordPress and Docker
 
@@ -111,6 +124,8 @@ Now that you have a functional WordPress environment on your Lightsail instance,
       - Here are some things to consider when evaluating Astha:
       - Check the theme's documentation and reviews to ensure it meets your needs and offers functionalities you desire 
       - Consider the theme's support options in case you encounter any issues during setup or customization.
+      - ![main plugin](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/4dc867cd-c841-4469-bb49-0d79b026327a)
+
 
 4.2. Installing and Configuring Plugins
 
@@ -126,6 +141,10 @@ Now that you have a functional WordPress environment on your Lightsail instance,
 -  d) SMTP Server Plugin:
     To enable email functionality for your blog (e.g., contact form submissions), you'll need to configure an SMTP server. This typically involves using a plugin like WP Mail SMTP or Post SMTP. These 
            plugins allow you to connect your WordPress site to an external email service provider (ESP) like Gmail, SendGrid, etc., for sending emails.
+- ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/7611c85f-cbcc-4f59-8c5b-7b04b34c91ed)
+- ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/978a8382-cb37-4491-bfe0-dd2cf64b2d72)
+
+
            
 4.3. Creating Pages and Blog Posts on Cloud Technologies (AWS, Jenkins, Terraform, Prometheus, Grafana):
 
@@ -134,16 +153,36 @@ Now that you have a functional WordPress environment on your Lightsail instance,
  1. Creating Pages:
  -  Navigate to your WordPress admin dashboard.
  -  In the left-hand menu, hover over "Pages" and click on "Add New".
+ -  ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/ab78a0b2-d663-4f61-b038-e079c8232fcb)
+
 2. Building Each Page:
 
-  - Home Page: This is typically your website's landing page. You can use Elementor or the WordPress editor to create a visually appealing and informative homepage. Consider including elements like a 
+  -  **Home Page:** This is typically your website's landing page. You can use Elementor or the WordPress editor to create a visually appealing and informative homepage. Consider including elements like a 
    hero section with a compelling headline, a brief about your blog's focus, featured blog posts, and a call to action.
-  - Blog Page: This page will likely display a list of your blog posts in a reverse chronological order (newest posts first). WordPress has a built-in "Blog" page template you can utilize for this 
+  - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/83e04d55-53e9-43a4-a137-960860339c7a)
+  - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/583aca56-215b-4488-a989-f861d93cb9ef)
+
+ 
+  - **Blog Page:** This page will likely display a list of your blog posts in a reverse chronological order (newest posts first). WordPress has a built-in "Blog" page template you can utilize for this 
      purpose. You can customize the layout and design using Elementor or the editor.
-  - Reviews Page: Create a new page for reviews. You can structure this page similarly to your blog page, listing your reviews. Consider using categories or tags to organize your reviews by topic or 
+  -   ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/935cfcf8-075b-47a6-956e-25102a18254e)
+
+  -  ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/fb8a499d-fe06-4ee4-896a-db3dc3401384)
+
+  - **Reviews Page:** Create a new page for reviews. You can structure this page similarly to your blog page, listing your reviews. Consider using categories or tags to organize your reviews by topic or 
     product
-  -  Contact Us Page: This page provides a way for visitors to connect with you. Include a contact form where visitors can submit messages, your email address, and any other relevant contact 
+  - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/b32c124e-9f2c-407a-8d3e-99bf85a595fd)
+  - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/0084db1c-0ff6-4ba1-947d-650d674978d4)
+
+
+    
+  -  **Contact Us Page:** This page provides a way for visitors to connect with you. Include a contact form where visitors can submit messages, your email address, and any other relevant contact 
     information (e.g., social media links). Many contact form plugins are available, allowing you to create a user-friendly form for collecting inquiries.
+  - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/1b6949a0-fd91-4be9-b36b-e3a68c4da745)
+
+  -  ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/6c597e87-c778-4789-b413-d07addb932e9)
+
+
   3. Setting Menus:
            Once you've created your pages, you need to add them to your website's navigation menu for visitors to access them easily.
 
@@ -155,12 +194,9 @@ Now that you have a functional WordPress environment on your Lightsail instance,
 - Select a menu location from the "Menu Settings" section on the right (typically "Primary Menu" or "Header Menu"). This defines where the menu will appear on your website.
 - Click on "Save Menu" to finalize the menu creation
 
-- A great list of topics for your blog! Here are some tips for creating informative and engaging content:
+- ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/c876d7ef-77a7-4907-be62-921e084495f3)
 
- - Target Audience: Consider who your target audience is (beginners, experienced users) and tailor your content's depth and complexity accordingly.
- - Structure and Clarity: Organize your posts with clear headings, subheadings, and bullet points for readability.
- - Examples and Visuals: Include code snippets, screenshots, and diagrams to illustrate concepts and enhance understanding.
- - Calls to Action: Encourage reader interaction by posing questions or inviting them to subscribe or share your content.
+
 
 ## 5. Domain Registration and Configuration with Lightsail
 
@@ -180,6 +216,9 @@ Now that you have a functional WordPress environment on your Lightsail instance,
 
 - Create a DNS Zone in Lightsail (if not done already):
 
+- ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/7d44a1e0-258e-4e20-bc42-045e3dff2b6c)
+
+
 - In the Lightsail console, navigate to the "Networking" tab and choose "Domain names".
 -  Click on "Create domain name" and follow the wizard to add your domain name (onlinecloudschool.com).
 -   Add an A Record:
@@ -188,6 +227,8 @@ Now that you have a functional WordPress environment on your Lightsail instance,
 -  Select "A" record type.
 - In the "Name" field, enter "@" (this signifies the root domain).
 -  In the "Value" field, enter the public IP address of your Lightsail instance (3.110.136.100 in this case). Leave the port number (8080) out, as the default web server port (80) is assumed.
+-  ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/d227d5de-54ef-4886-b8d8-a40005a59349)
+
 #### ## Logging In, Creating Backups, and Automating the Process on Your Lightsail Instance
 
 Here's a breakdown of the steps to log in, create backups, and automate the process on your Lightsail instance:
@@ -210,10 +251,13 @@ While automating backups is ideal, here's how to create a manual snapshot for im
   - In the instance details section, under "Actions," click on "Create snapshot."
   - Choose a descriptive name for your snapshot (e.g., "manual-backup-2024-04-13").
   - Click on "Create snapshot" to initiate the backup process.
+  - ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/e13aac22-ea84-4110-a3b3-511cdca68a8b)
+
 
 **3. Automating Backups with Bash Script**
 
 Here's how to set up an automated backup script:
+
 
 **a) Creating the Script:**
 
@@ -244,6 +288,7 @@ Here's how to set up an automated backup script:
 
   echo "Backup completed: wordpress_backup_${DATE}.tar.gz"
   ```
+ - ![S3 backup](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/6dd8b2ae-e77e-4cd6-8dec-9671ba57aa72)
 
   **Explanation:**
 
@@ -339,12 +384,16 @@ docker login
 ```bash
 docker push your-username/wordpress-app:latest
 ```
+- ![docker push](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/d0b78409-dc22-4201-8d6b-3be1c255d80a)
 
-  - Replace `your-username` with your actual Docker Hub username.
 
-**Important Notes:**
+## Deployment Architecture
 
-- This is a basic example. You might need to adjust the `Dockerfile` depending on your specific WordPress configuration and requirements.
-- Consider security best practices when building and deploying containerized applications.
+- ![Capstone drawio](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/84285615-0d6f-4cce-93d9-4a2c2dd7934a)
 
-By following these steps, you'll have a Docker image containing your WordPress website ready for deployment on any Docker-compatible environment. You can then use this image to deploy your website to cloud platforms like AWS Elastic Container Service (ECS) or run it locally using Docker Desktop.
+## Cost Estimation
+
+- ![image](https://github.com/mohanvedase/Capstone_Wordpress/assets/139565500/616cd281-a841-4578-8537-93d896937719)
+
+
+---------------------------------------------------------------------THE END --------------------------------------------------------------------
