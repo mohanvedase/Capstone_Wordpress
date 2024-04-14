@@ -17,12 +17,12 @@ fi
 # Database credentials (replace with your actual credentials)
 DB_NAME="wpdb"
 DB_USER="mohan"
-DB_PASSWORD="M@keinindia1"
+DB_PASSWORD=""
 
 # AWS S3 configuration (replace with your actual credentials)
-AWS_ACCESS_KEY_ID="AKIAZAWOA5P3WOD3IPUW"
-AWS_SECRET_ACCESS_KEY="C9mkaZPSSOOVmYzxTlzgqWxkMdp7WYvdNEebQ7Z7"
-S3_BUCKET="capstone-onlinecloudschool"
+AWS_ACCESS_KEY_ID=""
+AWS_SECRET_ACCESS_KEY=""
+S3_BUCKET=""
 
 # Ensure required commands are available
 if ! command -v mysqldump &> /dev/null; then
